@@ -1,14 +1,13 @@
 
 import Sakib from "../assets/Sakib.png";
 import React from "react";
-import { Fragment } from 'react'
 import {
   Disclosure,
   DisclosureButton,
-  DisclosurePanel,
-
-} from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+  DisclosurePanel
+} from '@headlessui/react';
+import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import Tabs from './Tabs';
 const navigation = [
 
 
@@ -17,7 +16,7 @@ const navigation = [
     { name: 'Expertise', href: '/expertise', current: false },
     { name: 'Education', href: '/education', current: false },
     { name: 'Experiance', href: '/experiance', current: false },
-    { name: 'Projects', href: '/project', current: false },
+    { name: 'Projects', href: '/projects', current: false },
     { name: 'Testimonials', href: '/testimonials', current: false },
   ]
   
@@ -108,9 +107,16 @@ const Home = () => {
     </Disclosure>
 </div>
 
-            <div className="max-w-7xl h-auto mx-auto rounded -mt-[350px] z-10 relative left-0 right-0  bg-white shadow-lg" id="about">
-                <div className="grid md:grid-cols-2">
-                    <div className="col-span-1 p-20  mx-auto text-start items-center relative">
+            <div className="max-w-7xl h-auto mx-auto bg-gradient-to-r from-blue-200/50 via-purple-200/50 to-gray-200/50 rounded -mt-[350px] z-10 relative left-0 right-0  bg-white shadow-lg" id="about">
+                <div className="grid md:grid-cols-5">
+
+                <div className="col-span-2 p-10  mx-auto mt-10 relative">
+
+                        <img src={Sakib} alt="Sakib" className="w-[400px]   rounded-lg   h-[450px]" />
+
+                        </div>
+                        <div class="border-l-[1px] border-dashed col-span-1 mx-auto h-full border-gray-500"></div>
+                    <div className="col-span-2 p-20  mx-auto text-start  mt-8 relative">
                         <p className="text-[15px] text-gray-500 font-medium">HELLO EVERYBODY, I'M</p>
                         <h1 className="text-gray-900 text-gray-500 font-extrabold text-[32px]">MD. SAKIB KAMAL</h1>
                         <p className="text-[15px] text-gray-500 font-medium">JUNIOR WEB DEVELOPER</p>
@@ -166,11 +172,7 @@ const Home = () => {
                             </svg>
                         </div>
                     </div>
-                    <div className="col-span-1 p-10  mx-auto mt-10 relative">
-
-                        <img src={Sakib} alt="Sakib" className="w-[360px]   rounded-full border-[1px] border-dotted border-blue-500/50 bg-gray-300 hover:bg-gray-100  h-[460px]" />
-
-                    </div>
+                    
                 </div>
             </div>
 
@@ -231,24 +233,39 @@ const Home = () => {
             </div>
 
 
-            
-
-
+            <div className="container p-5 max-w-7xl mx-auto mt-8">
+            <Tabs>
+                <div  label="Edfucation">
+                <p>Content for Tab 1</p>
+                </div>
+                <div label="Experinances">
+                <p>Content for Tab 2</p>
+                </div>
+               
+            </Tabs>
+            </div>
 
 
             
             
             
             <div className="text-center mx-auto text-[32px] font-extrabold mt-20 max-w-7xl">
-                <h1>OFFERING TO MY ORGANIZATION</h1>
-
+                <h1>OFFERING TO THE ORGANIZATION</h1>
+                
+            </div>
+            <div className="text-center mx-auto p-3 text-[16px] text-gray-500 font-small  max-w-7xl">
+            <p>I'm Performing as a Software Developer in Popular Diagnostic Centre Limited at Dhanmondi.
+                        My Theoritical Knowladge of Computer Science was gained from A well Raputed University At Bangladesh Which is Daffodil International University.
+                        And all the Practical Skills That I Have Learned from Klower Cloud,Automation Research Centre, Popular Diagnostic Centre Ltd .
+                        between 1st January 2020 to Current Time Space </p>
+                
             </div>
 
             <div className="grid md:grid-cols-3 max-w-7xl mx-auto">
                 <div className="col-span-1 p-10  mt-10 mx-auto  relative">
 
 
-                    <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg p-[50px] shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="max-w-sm p-6 bg-white border border-gray-200 bg-blue-50  rounded-lg p-[50px] shadow dark:bg-gray-800 dark:border-gray-700">
                     <svg className="w-[75px] h-[75px] hover:fill-[#8e8e8e] fill-blue-500/50" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
 
                     <path d="M352 96c0 14.3-3.1 27.9-8.8 40.2L396 227.4c-23.7 25.3-54.2 44.1-88.5 53.6L256 192h0 0l-68 117.5c21.5 6.8 44.3 10.5 68.1 10.5c70.7 0 133.8-32.7 174.9-84c11.1-13.8 31.2-16 45-5s16 31.2 5 45C428.1 341.8 347 384 256 384c-35.4 0-69.4-6.4-100.7-18.1L98.7 463.7C94 471.8 87 478.4 78.6 482.6L23.2 510.3c-5 2.5-10.9 2.2-15.6-.7S0 501.5 0 496V440.6c0-8.4 2.2-16.7 6.5-24.1l60-103.7C53.7 301.6 41.8 289.3 31.2 276c-11.1-13.8-8.8-33.9 5-45s33.9-8.8 45 5c5.7 7.1 11.8 13.8 18.2 20.1l69.4-119.9c-5.6-12.2-8.8-25.8-8.8-40.2c0-53 43-96 96-96s96 43 96 96zm21 297.9c32.6-12.8 62.5-30.8 88.9-52.9l43.7 75.5c4.2 7.3 6.5 15.6 6.5 24.1V496c0 5.5-2.9 10.7-7.6 13.6s-10.6 3.2-15.6 .7l-55.4-27.7c-8.4-4.2-15.4-10.8-20.1-18.9L373 393.9zM256 128a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"></path>
@@ -284,7 +301,7 @@ const Home = () => {
                 </div>
                 <div className="col-span-1 p-10  mt-10 mx-auto  relative">
 
-                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow p-[50px] dark:bg-gray-800 dark:border-gray-700">
+                <div class="max-w-sm p-6 bg-white border border-gray-200 bg-blue-50 rounded-lg shadow p-[50px] dark:bg-gray-800 dark:border-gray-700">
                 <svg className="w-[75px] h-[75px] hover:fill-[#8e8e8e] fill-blue-500/50" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
 
                 <path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path>
@@ -314,8 +331,8 @@ const Home = () => {
                     </ul>
                     </div>
                 </div>
-                <div className="col-span-1 p-10  mt-10 mx-auto  relative">
-                <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow  p-[50px] dark:bg-gray-800 dark:border-gray-700">
+                <div className="col-span-1 p-10  mt-10 mx-auto   relative">
+                <div class="max-w-sm p-6 bg-white border border-gray-200 bg-blue-50 rounded-lg shadow  p-[50px] dark:bg-gray-800 dark:border-gray-700">
                 <svg className="w-[75px] h-[75px] hover:fill-[#8e8e8e] fill-blue-500/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
 
                 <path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"></path>
