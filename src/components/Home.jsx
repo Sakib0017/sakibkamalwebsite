@@ -1,124 +1,236 @@
 
 import Sakib from "../assets/Sakib.png";
 import React from "react";
+import { Fragment, useState } from 'react'
 import {
+  Dialog,
+  DialogPanel,
   Disclosure,
   DisclosureButton,
-  DisclosurePanel
-} from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import Tabs from './Tabs';
-const navigation = [
+  DisclosurePanel,
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+  Transition,
+} from '@headlessui/react'
+import {
+  ArrowPathIcon,
+  Bars3Icon,
+  ChartPieIcon,
+  CursorArrowRaysIcon,
+  FingerPrintIcon,
+  SquaresPlusIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline'
+import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+
+const products = [
 
 
-    { name: 'About', href: '/about', current: true },
-    { name: 'Skills', href: '/skills', current: false },
-    { name: 'Expertise', href: '/expertise', current: false },
-    { name: 'Education', href: '/education', current: false },
-    { name: 'Experiance', href: '/experiance', current: false },
-    { name: 'Projects', href: '/projects', current: false },
-    { name: 'Testimonials', href: '/testimonials', current: false },
-  ]
-  
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
+  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
+  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
+  { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
+  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
+  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+]
+const callsToAction = [
+
+
+  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
+  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+]
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
+
   
 const Home = () => {
-    
+     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
  
     return (
         
         <div>
-            <div className="relative ">
-    <div className="h-[600px] bg-gradient-to-r from-blue-500 via-purple-500 to-gray-500  sm:h-[600px] w-screen object-cover object-center top-0 left-0 pb-[1px] "></div>
+             <div className="relative ">
+    <div className="h-screen bg-gradient-to-r from-blue-300 via-purple-900/50 to-blue-300 sm:h-screen w-screen object-cover object-center top-0 left-0 pb-[1px] "></div>
 
-    <Disclosure as="nav" className="bg-gray-800 z-20 fixed top-0 w-screen bg-gradient-to-r from-blue-500 via-purple-500 to-gray-500">
-        {({ open }) => (
-            <>
-                <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                    <div className="relative flex h-16 items-center justify-between">
-                        <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                            <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-100 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                                <span className="absolute -inset-0.5" />
-                                <span className="sr-only">Open main menu</span>
-                                {open ? (
-                                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                                ) : (
-                                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                                )}
-                            </DisclosureButton>
-                        </div>
-                        <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                            <div className="flex flex-shrink-0 items-center">
-                                <h1 className="text-white font-bold font-ubuntu">sakibkamal.dev</h1>
-                            </div>
-                            <div className="hidden sm:ml-6 sm:block ">
-                                <div className="flex space-x-5  "> {/* Centering the navigation links */}
-                                    {navigation.map((item) => (
-                                        <a
-                                            key={item.name}
-                                            href={item.href}
-                                            className={classNames(
-                                                item.current ? 'bg-gray-900 text-white ' : 'text-white hover:bg-gray-700  hover:text-white',
-                                                'rounded-md px-3 py-2 text-sm font-extrabold ' // Adding font-bold class
-                                            )}
-                                            aria-current={item.current ? 'page' : undefined}
-                                        >
-                                            {item.name}
-                                        </a>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                        <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                            <button
-                                type="button"
-                                className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                            >
-                                <span className="absolute -inset-1.5" />
-                                <span className="sr-only">View notifications</span>
-                                <BellIcon className="h-6 w-6" aria-hidden="true" />
-                            </button>
-                        </div>
+      <header className=" bg-gradient-to-r from-blue-300 via-purple-900/50 to-blue-300 z-20 fixed top-0 w-screen">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div className="flex lg:flex-1">
+          <p className="text-white font-extrabold text-[28px] font-ubuntu">S <span className="text-[18px] animate-ping">*</span> K <span className="text-[18px] animate-ping">*</span> R</p>
+        </div>
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+          </button>
+        </div>
+        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
+              Product
+              <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+            </PopoverButton>
+
+            <Transition
+              enter="transition ease-out duration-200"
+              enterFrom="opacity-0 translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-1"
+            >
+              <PopoverPanel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-gradient-to-r from-gray-800/80 via-gray-600/60 to-gray-900/90 shadow-lg ring-1 ring-gray-900/5">
+                <div className="p-4">
+                  {products.map((item) => (
+                    <div
+                      key={item.name}
+                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                    >
+                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-gradient-to-r from-gray-800/80 via-gray-600/60 to-gray-900/90">
+                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
+                      </div>
+                      <div className="flex-auto">
+                        <a href={item.href} className="block font-semibold text-white">
+                          {item.name}
+                          <span className="absolute inset-0" />
+                        </a>
+                        <p className="mt-1 text-gray-600">{item.description}</p>
+                      </div>
                     </div>
+                  ))}
                 </div>
+                <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                  {callsToAction.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-white hover:bg-gray-100"
+                    >
+                      <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </PopoverPanel>
+            </Transition>
+          </Popover>
 
-                <DisclosurePanel className="sm:hidden ">
-                    <div className="space-y-1 px-2 pb-3 pt-2">
-                        {navigation.map((item) => (
-                            <DisclosureButton
-                                key={item.name}
-                                as="a"
-                                href={item.href}
-                                className={classNames(
-                                    item.current ? 'bg-gray-900 text-white' : 'text-white hover:bg-gray-700 hover:text-white',
-                                    'block rounded-md px-3 py-2 text-base font-extrabold'
-                                )}
-                                aria-current={item.current ? 'page' : undefined}
-                            >
-                                {item.name}
-                            </DisclosureButton>
+          <a href="#" className="text-sm font-semibold leading-6 text-white">
+            Features
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-white">
+            Marketplace
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-white">
+            Company
+          </a>
+        </PopoverGroup>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="#" className="text-sm font-semibold leading-6 text-white">
+            Log in <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </nav>
+      <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <div className="fixed inset-0 z-10" />
+        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-r from-gray-800/80 via-gray-600/60 to-gray-900/90 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex items-center justify-between">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+              <img
+                className="h-8 w-auto"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                alt=""
+              />
+            </a>
+            <button
+              type="button"
+              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className="sr-only">Close menu</span>
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6">
+                <Disclosure as="div" className="-mx-3">
+                  {({ open }) => (
+                    <>
+                      <DisclosureButton className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-gray-50">
+                        Product
+                        <ChevronDownIcon
+                          className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
+                          aria-hidden="true"
+                        />
+                      </DisclosureButton>
+                      <DisclosurePanel className="mt-2 space-y-2">
+                        {[...products, ...callsToAction].map((item) => (
+                          <DisclosureButton
+                            key={item.name}
+                            as="a"
+                            href={item.href}
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-gray-50"
+                          >
+                            {item.name}
+                          </DisclosureButton>
                         ))}
-                    </div>
-                </DisclosurePanel>
-            </>
-        )}
-    </Disclosure>
-</div>
+                      </DisclosurePanel>
+                    </>
+                  )}
+                </Disclosure>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50"
+                >
+                  Features
+                </a>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50"
+                >
+                  Marketplace
+                </a>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50"
+                >
+                  Company
+                </a>
+              </div>
+              <div className="py-6">
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-50"
+                >
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+        </DialogPanel>
+      </Dialog>
+    </header>
+    </div>
+    
 
-            <div className="max-w-7xl h-auto mx-auto bg-gradient-to-r from-blue-200/50 via-purple-200/50 to-gray-200/50 rounded -mt-[350px] z-10 relative left-0 right-0  bg-white shadow-lg" id="about">
+            <div className="max-w-7xl h-auto mx-auto   rounded -mt-[350px] z-10 relative left-0 right-0  bg-gradient-to-r from-blue-900/50 via-purple-300/50 to-blue-900/50 shadow-2xl" id="about">
                 <div className="grid md:grid-cols-5">
 
-                <div className="col-span-2 p-10  mx-auto mt-10 relative">
-
-                        <img src={Sakib} alt="Sakib" className="w-[400px]   rounded-lg   h-[450px]" />
-
-                        </div>
+                
                         <div class="border-l-[1px] border-dashed col-span-1 mx-auto h-full border-gray-500"></div>
                     <div className="col-span-2 p-20  mx-auto text-start  mt-8 relative">
                         <p className="text-[15px] text-gray-500 font-medium">HELLO EVERYBODY, I'M</p>
-                        <h1 className="text-gray-900 text-gray-500 font-extrabold text-[32px]">MD. SAKIB KAMAL</h1>
+                        <h1 className="text-white text-gray-500 font-extrabold text-[32px]">MD. SAKIB KAMAL</h1>
                         <p className="text-[15px] text-gray-500 font-medium">JUNIOR WEB DEVELOPER</p>
                         <p className="text-[13px] text-gray-600/60 pt-5 font-medium text-gray-600/60">I'm A Computer Science & Engineering Certified Student Of Daffodil International University</p>
                         <div className="flex items-center pt-5">
@@ -172,14 +284,18 @@ const Home = () => {
                             </svg>
                         </div>
                     </div>
-                    
+                    <div className="col-span-2 p-10  mx-auto mt-10 relative">
+
+                        <img src={Sakib} alt="Sakib" className="w-[400px]   rounded-lg   h-[450px]" />
+
+                        </div>
                 </div>
             </div>
 
             <div className="grid md:grid-cols-2 max-w-7xl mx-auto" id="expertise">
                 <div className="col-span-1 p-20  mx-auto text-start items-center relative">
 
-                    <h1 className="text-gray-900 text-gray-500 font-extrabold text-[32px]">ABOUT MYSELF & SKILLS</h1>
+                    <h1 className="text-white text-gray-500 font-extrabold text-[32px]">ABOUT MYSELF & SKILLS</h1>
 
                     <p className="text-[16px] text-gray-600/60 pt-5 font-medium text-gray-600/60">I'm Performing as a Software Developer in <span className="text-blue-500 font-bold">Popular Diagnostic Centre Limited</span> at Dhanmondi.
                         My Theoritical Knowladge of Computer Science was gained from A well Raputed University At Bangladesh Which is <span className="text-blue-500 font-bold">Daffodil International University</span>.
@@ -233,17 +349,7 @@ const Home = () => {
             </div>
 
 
-            <div className="container p-5 max-w-7xl mx-auto mt-8">
-            <Tabs>
-                <div  label="Edfucation">
-                <p>Content for Tab 1</p>
-                </div>
-                <div label="Experinances">
-                <p>Content for Tab 2</p>
-                </div>
-               
-            </Tabs>
-            </div>
+           
 
 
             
@@ -265,13 +371,13 @@ const Home = () => {
                 <div className="col-span-1 p-10  mt-10 mx-auto  relative">
 
 
-                    <div class="max-w-sm p-6 bg-white border border-gray-200 bg-blue-50  rounded-lg p-[50px] shadow dark:bg-gray-800 dark:border-gray-700">
+                    <div class="max-w-sm p-6 bg-gradient-to-r from-gray-800/80 via-gray-600/60 to-gray-900/90 border border-gray-200 bg-blue-50  rounded-lg p-[50px] shadow dark:bg-gray-800 dark:border-gray-700">
                     <svg className="w-[75px] h-[75px] hover:fill-[#8e8e8e] fill-blue-500/50" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
 
                     <path d="M352 96c0 14.3-3.1 27.9-8.8 40.2L396 227.4c-23.7 25.3-54.2 44.1-88.5 53.6L256 192h0 0l-68 117.5c21.5 6.8 44.3 10.5 68.1 10.5c70.7 0 133.8-32.7 174.9-84c11.1-13.8 31.2-16 45-5s16 31.2 5 45C428.1 341.8 347 384 256 384c-35.4 0-69.4-6.4-100.7-18.1L98.7 463.7C94 471.8 87 478.4 78.6 482.6L23.2 510.3c-5 2.5-10.9 2.2-15.6-.7S0 501.5 0 496V440.6c0-8.4 2.2-16.7 6.5-24.1l60-103.7C53.7 301.6 41.8 289.3 31.2 276c-11.1-13.8-8.8-33.9 5-45s33.9-8.8 45 5c5.7 7.1 11.8 13.8 18.2 20.1l69.4-119.9c-5.6-12.2-8.8-25.8-8.8-40.2c0-53 43-96 96-96s96 43 96 96zm21 297.9c32.6-12.8 62.5-30.8 88.9-52.9l43.7 75.5c4.2 7.3 6.5 15.6 6.5 24.1V496c0 5.5-2.9 10.7-7.6 13.6s-10.6 3.2-15.6 .7l-55.4-27.7c-8.4-4.2-15.4-10.8-20.1-18.9L373 393.9zM256 128a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"></path>
 
                     </svg>
-                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Expertise At Frontend</h5>
+                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white dark:text-white">Expertise At Frontend</h5>
                    
                     <ul class="w-full  text-gray-500 list-inside dark:text-gray-400">
                         <li class="flex items-center">
@@ -301,13 +407,13 @@ const Home = () => {
                 </div>
                 <div className="col-span-1 p-10  mt-10 mx-auto  relative">
 
-                <div class="max-w-sm p-6 bg-white border border-gray-200 bg-blue-50 rounded-lg shadow p-[50px] dark:bg-gray-800 dark:border-gray-700">
+                <div class="max-w-sm p-6 bg-gradient-to-r from-gray-800/80 via-gray-600/60 to-gray-900/90 border border-gray-200 bg-blue-50 rounded-lg shadow p-[50px] dark:bg-gray-800 dark:border-gray-700">
                 <svg className="w-[75px] h-[75px] hover:fill-[#8e8e8e] fill-blue-500/50" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
 
                 <path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"></path>
 
                 </svg>
-                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Expertise At Backend</h5>
+                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white dark:text-white">Expertise At Backend</h5>
                     <ul class="w-full  text-gray-500 list-inside dark:text-gray-400">
                         <li class="flex items-center">
                             <svg class="w-3.5 h-3.5 me-2 text-blue-500 dark:text-blue-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -332,13 +438,13 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-span-1 p-10  mt-10 mx-auto   relative">
-                <div class="max-w-sm p-6 bg-white border border-gray-200 bg-blue-50 rounded-lg shadow  p-[50px] dark:bg-gray-800 dark:border-gray-700">
+                <div class="max-w-sm p-6 bg-gradient-to-r from-gray-800/80 via-gray-600/60 to-gray-900/90 border border-gray-200 bg-blue-50 rounded-lg shadow  p-[50px] dark:bg-gray-800 dark:border-gray-700">
                 <svg className="w-[75px] h-[75px] hover:fill-[#8e8e8e] fill-blue-500/50" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
 
                 <path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"></path>
 
                 </svg>
-                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">Expertise At Database</h5>
+                    <h5 class="mb-2 text-2xl font-semibold tracking-tight text-white dark:text-white">Expertise At Database</h5>
                     <ul class="w-full  text-gray-500 list-inside dark:text-gray-400">
                         <li class="flex items-center">
                             <svg class="w-3.5 h-3.5 me-2 text-blue-500 dark:text-blue-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
