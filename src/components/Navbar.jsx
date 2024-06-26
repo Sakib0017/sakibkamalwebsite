@@ -26,12 +26,12 @@ const Navbar = () => {
         <header className=" bg-gray-100 shadow  z-20 fixed top-0 w-full">
           <nav className="mx-auto flex max-w-7xl h-[75px] items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
-              <Link to='/'><p className="text-blue-900 font-extrabold text-[28px] font-ubuntu">S <span className="text-[18px] animate-ping">*</span> K <span className="text-[18px] animate-ping">*</span> R</p></Link>
+              <Link to='/'><p className="text-[#2c3748] font-extrabold text-[28px] font-ubuntu">S <span className="text-[18px] animate-ping">*</span> K <span className="text-[18px] animate-ping">*</span> R</p></Link>
             </div>
             <div className="flex lg:hidden">
               <button
                 type="button"
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-blue-700"
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-2c3748-700"
                 onClick={() => setMobileMenuOpen(true)}
               >
                 <span className="sr-only">Open main menu</span>
@@ -42,32 +42,30 @@ const Navbar = () => {
 
 
              
-             <Link to="/skill"> <a href="#" className="text-sm font-semibold leading-6 text-blue-900">
-                Skills
-              </a></Link>
-              <Link to="/education"><a href="#" className="text-sm font-semibold leading-6 text-blue-900">
+             
+              <Link to="/education"><a href="#" className="text-sm font-semibold leading-6 text-[#2c3748]">
                 Education
               </a></Link>
               
-              <a href="#" className="text-sm font-semibold leading-6 text-blue-900">
+              <a href="#" className="text-sm font-semibold leading-6 text-[#2c3748]">
                 Work Experiance
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-blue-900">
+              <a href="#" className="text-sm font-semibold leading-6 text-[#2c3748]">
                 Projects
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-blue-900">
+              <a href="#" className="text-sm font-semibold leading-6 text-[#2c3748]">
                 Contact
               </a>
             </PopoverGroup>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-              <a href="#" className="text-sm font-semibold leading-6 text-blue-900">
+              <a href="#" className="text-sm font-semibold leading-6 text-[#2c3748]">
                 Resume <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </nav>
           <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
             <div className="fixed inset-0 z-10" />
-            <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-r from-blue-800/80 via-blue-600/60 to-blue-900/90 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-blue-900/10">
+            <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-r from-[#2c3748]/80 via-[#2c3748]/80 to-[#2c3748]/80 px-6 py-6 sm:max-w-sm sm:ring-1 ">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
                   
@@ -83,7 +81,7 @@ const Navbar = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
-                  <XMarkIcon className="h-6 w-6 text-gray-100" aria-hidden="true" />
+                  <XMarkIcon className="h-6 w-6 text-[#2c3748]" aria-hidden="true" />
                 </button>
               </div>
               <div className="mt-20 flow-root">
@@ -91,34 +89,29 @@ const Navbar = () => {
                   <div className="space-y-2 py-6">
 
                     
+                   
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-blue-50"
-                    >
-                      Skills
-                    </a>
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-blue-50"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-2c3748-50"
                     >
                       Education
                     </a>
                     
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-blue-50"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-2c3748-50"
                     >
                       Work Experinces
                     </a>
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-blue-50"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-2c3748-50"
                     >
                       Projects
                     </a>
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-blue-50"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-2c3748-50"
                     >
                       Contact
                     </a>
@@ -126,7 +119,7 @@ const Navbar = () => {
                   <div className="py-6">
                     <a
                       href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-blue-900 hover:bg-blue-50"
+                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-2c3748-50"
                     >
                       Resume
                     </a>
