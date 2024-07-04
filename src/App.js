@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <Router>
-    <div className="bg-white h-screen  w-screen">
+    <div className=" h-screen  w-screen">
      
       <Routes>
        

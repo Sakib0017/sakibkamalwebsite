@@ -23,10 +23,11 @@ const Navbar = () => {
       <div className="relative ">
         
 
-        <header className=" bg-gray-100 shadow  z-20 fixed top-0 w-full">
+        <header className=" bg-[#161616]/90 shadow  z-20 fixed top-0 w-full">
           <nav className="mx-auto flex max-w-7xl h-[75px] items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
-              <Link to='/'><p className="text-[#2c3748] font-extrabold text-[28px] font-ubuntu">S <span className="text-[18px] animate-ping">*</span> K <span className="text-[18px] animate-ping">*</span> R</p></Link>
+              <Link to='/'><p className="text-[#161616]/90 w-[45px] pl-1 pt-2 h-[50px] bg-white font-extrabold text-[28px] font-ubuntu">SK</p></Link>
+              <p  className="flex pl-5 items-center font-extrabold text-white justify-center ">SAKIB | KAMAL</p>
             </div>
             <div className="flex lg:hidden">
               <button
@@ -43,29 +44,29 @@ const Navbar = () => {
 
              
              
-              <Link to="/education"><a href="#" className="text-sm font-semibold leading-6 text-[#2c3748]">
-                Education
+              <Link to="/education"><a href="#" className="text-sm font-semibold leading-6 text-white">
+                Education & Training
               </a></Link>
               
-              <a href="#" className="text-sm font-semibold leading-6 text-[#2c3748]">
+              <a href="#" className="text-sm font-semibold leading-6 text-white">
                 Work Experiance
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-[#2c3748]">
+              <a href="#" className="text-sm font-semibold leading-6 text-white">
                 Projects
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-[#2c3748]">
+              <a href="#" className="text-sm font-semibold leading-6 text-white">
                 Contact
               </a>
             </PopoverGroup>
             <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-              <a href="#" className="text-sm font-semibold leading-6 text-[#2c3748]">
+              <a href="#" className="text-sm font-semibold leading-6 text-white">
                 Resume <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </nav>
           <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
             <div className="fixed inset-0 z-10" />
-            <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-r from-[#2c3748]/80 via-[#2c3748]/80 to-[#2c3748]/80 px-6 py-6 sm:max-w-sm sm:ring-1 ">
+            <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-r from-white/80 via-white/80 to-white/80 px-6 py-6 sm:max-w-sm sm:ring-1 ">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
                   
@@ -81,7 +82,7 @@ const Navbar = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
-                  <XMarkIcon className="h-6 w-6 text-[#2c3748]" aria-hidden="true" />
+                  <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
                 </button>
               </div>
               <div className="mt-20 flow-root">
@@ -94,7 +95,7 @@ const Navbar = () => {
                       href="#"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-2c3748-50"
                     >
-                      Education
+                      Education & Training
                     </a>
                     
                     <a
