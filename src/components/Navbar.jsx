@@ -26,7 +26,7 @@ const Navbar = () => {
         <header className=" bg-[#161616]/90 shadow  z-20 fixed top-0 w-full">
           <nav className="mx-auto flex max-w-7xl h-[75px] items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
-              <Link to='/'><p className="text-[#161616]/90 w-[45px] pl-1 pt-2 h-[50px] bg-white font-extrabold text-[28px] font-ubuntu">SK</p></Link>
+              <Link to='/'><p className="text-[#161616]/90 w-[45px] rounded flex items-center justify-center p-1 h-[50px] bg-white font-extrabold text-[28px] font-ubuntu">SK</p></Link>
               <p  className="flex pl-5 items-center font-extrabold text-white justify-center ">SAKIB | KAMAL</p>
             </div>
             <div className="flex lg:hidden">
