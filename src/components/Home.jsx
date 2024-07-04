@@ -120,7 +120,7 @@ const Home = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element "
             contentStyle={{ background: '#161616', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '40px solid  #161616' }}
+            contentArrowStyle={{ borderRight: '10px solid  #161616' }}
 
             iconStyle={{ background: '#161616', color: '#fff' }}
             icon={<i className="fa fa-check-circle"></i>}
@@ -136,7 +136,7 @@ const Home = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element"
             contentStyle={{ background: '#161616', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '40px solid  #161616' }}
+            contentArrowStyle={{ borderRight: '10px solid  #161616' }}
 
             iconStyle={{ background: '#161616', color: '#fff' }}
             icon={<i className="fa fa-check-circle"></i>}
@@ -152,7 +152,7 @@ const Home = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element"
             contentStyle={{ background: '#161616', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '40px solid  #161616' }}
+            contentArrowStyle={{ borderRight: '10px solid  #161616' }}
 
             iconStyle={{ background: '#161616', color: '#fff' }}
             icon={<i className="fa fa-check-circle"></i>}
@@ -168,7 +168,7 @@ const Home = () => {
           <VerticalTimelineElement
             className="vertical-timeline-element"
             contentStyle={{ background: '#161616', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '40px solid  #161616' }}
+            contentArrowStyle={{ borderRight: '10px solid  #161616' }}
 
             iconStyle={{ background: '#161616', color: '#fff' }}
             icon={<i className="fa fa-check-circle"></i>}
