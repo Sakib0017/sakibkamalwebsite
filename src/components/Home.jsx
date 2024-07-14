@@ -28,14 +28,14 @@ const Home = () => {
   
   return (
 
-    <div className="bg-gray-900/20">
+    <div className="bg-white">
 
       <Navbar />
      
 
-      <div className="flex flex-wrap max-w-7xl mx-auto rounded items-center justify-center top-[120px] relative gap-10 backdrop-blur-sm" id="expertise">
+      <div className="grid md:grid-cols-2 max-w-[80%] mx-auto rounded items-center justify-center top-[120px] relative gap-10 backdrop-blur-sm" id="expertise">
      
-        <div className="me-auto p-5 text-start mt-8 relative mr-0">
+        <div className="col-span-1 me-auto p-5 text-start mt-8 relative mr-0">
           <p className="text-[15px] text-[#161616] font-bold">HELLO EVERYBODY, I'M</p>
           <h1 className="text-[#161616] text-[#161616] font-extrabold text-[32px]">MD. SAKIB KAMAL</h1>
           <p className="text-[15px] text-[#161616] font-bold">WEB DEVELOPER</p>
@@ -46,31 +46,31 @@ const Home = () => {
 
             <div className="flex flex-col  gap-2">
               <p className="text-start text-[14px] text-[#161616] font-extrabold">react.js 70%</p>
-              <div class="sm:w-[400px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
+              <div class="w-[450px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
                 <div class="bg-[#161616]  text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded" style={{ width: '70%' }}> 70%</div>
               </div>
             </div>
             <div className="flex flex-col  gap-2">
               <p className="text-start text-[14px] text-[#161616] font-extrabold">tailwindcss 90%</p>
-              <div class="sm:w-[400px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
+              <div class="w-[450px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
                 <div class="bg-[#161616]  text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded" style={{ width: '90%' }}> 90%</div>
               </div>
             </div>
             <div className="flex flex-col  gap-2">
               <p className="text-start text-[14px] text-[#161616] font-extrabold">node.js 70%</p>
-              <div class="sm:w-[400px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
+              <div class="w-[450px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
                 <div class="bg-[#161616]  text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded" style={{ width: '70%' }}> 70%</div>
               </div>
             </div>
             <div className="flex flex-col  gap-2">
               <p className="text-start text-[14px] text-[#161616] font-extrabold">express.js 50%</p>
-              <div class="sm:w-[400px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
+              <div class="w-[450px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
                 <div class="bg-[#161616]  text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded" style={{ width: '50%' }}> 50%</div>
               </div>
             </div>
             <div className="flex flex-col  gap-2">
               <p className="text-start text-[14px] text-[#161616] font-extrabold">Mongodb 70%</p>
-              <div class="sm:w-[400px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
+              <div class="w-[450px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
                 <div class="bg-[#161616]  text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded" style={{ width: '70%' }}> 70%</div>
               </div>
             </div>
@@ -96,13 +96,13 @@ const Home = () => {
           </div>
           
         </div>
-        <div className="ms-auto text-start mt-8 relative mr-0">
-          <img src={Sakib} alt="Sakib" className="h-[600px]  w-full rounded-2xl object-cover p-20" />
+        <div className="col-span-1 ms-auto text-start mt-5 relative mr-0">
+          <img src={Sakib} alt="Sakib" className="h-[400px]  w-auto rounded-2xl object-cover " />
           </div>
           
       </div>
       
-      <div className="mt-20 max-w-7xl mx-auto items-center relative justify-center">
+      <div className="mt-40 max-w-7xl mx-auto items-center relative justify-center">
       
         <h1 className="text-center text-[40px]  font-bold mb-20 z-20 text-[#161616] ">Educational Qualification</h1>
         <VerticalTimeline>
