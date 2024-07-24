@@ -21,11 +21,19 @@ const Navbar = () => {
 
         
 
+<<<<<<< HEAD
         <div className=" bg-[#161616]  sticky top-0 z-30 shadow-2xl ">
           <nav className="mx-auto flex max-w-7xl h-[75px] items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
               <Link to='/'><p className="text-[#161616]/90 w-[50px] rounded flex items-center justify-center p-1 h-[50px] bg-white font-extrabold text-[20px] font-ubuntu">SK</p></Link>
               <p  className="flex pl-5 items-center font-extrabold text-white justify-center ">SAKIB | KAMAL</p>
+=======
+        <header className=" bg-gray-50  shadow  z-20 fixed top-0 w-full">
+          <nav className="mx-auto flex max-w-7xl h-[75px] items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div className="flex lg:flex-1">
+              <Link to='/'><p className="text-white w-[50px] rounded flex items-center justify-center p-1 h-[50px] bg-[#161616]/90 font-medium text-[20px] font-ubuntu">SK</p></Link>
+              <p  className="flex pl-5 items-center font-extrabold text-[#161616] justify-center ">SAKIB | KAMAL</p>
+>>>>>>> origin
             </div>
             <div className="flex lg:hidden">
               <button
@@ -42,29 +50,34 @@ const Navbar = () => {
 
              
              
-              <Link to="/education"><p className="font-bold text-white">Education & Training</p>
+              <Link to="/education"><p className="font-bold text-[#161616]">Education & Training</p>
                 
              </Link>
               
-             <p className="font-bold text-white"> Work Experiance</p>
+             <p className="font-bold text-[#161616]"> Work Experiance</p>
                
-                <p className="font-bold text-white">Projects</p>
-                <p className="font-bold text-white">Contact</p>
+                <p className="font-bold text-[#161616]">Projects</p>
+                <p className="font-bold text-[#161616]">Contact</p>
                 
               
               
                 
               
             </PopoverGroup>
-            <div className="hidden lg:flex lg:flex-1 lg:justify-end font-bold text-white">
+            <div className="hidden lg:flex lg:flex-1 lg:justify-end font-bold text-[#161616]">
               
                 Resume <span aria-hidden="true">&rarr;</span>
               
             </div>
           </nav>
           <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+<<<<<<< HEAD
             <div className="fixed  inset-0 z-40" />
             <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-r from-white/80 via-white/80 to-white/80 px-6 py-6 sm:max-w-sm sm:ring-1 ">
+=======
+            <div className="fixed inset-0 z-10" />
+            <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-r from-[#161616]/80 via-[#161616]/80 to-[#161616]/80 px-6 py-6 sm:max-w-sm sm:ring-1 ">
+>>>>>>> origin
               <div className="flex items-center justify-between">
                 
                 
@@ -75,7 +88,7 @@ const Navbar = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
-                  <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                  <XMarkIcon className="h-6 w-6 text-[#161616]" aria-hidden="true" />
                 </button>
               </div>
               <div className="mt-20 flow-root">
