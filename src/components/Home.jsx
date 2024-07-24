@@ -12,24 +12,14 @@ const Home = () => {
   
   return (
 
-<<<<<<< HEAD
     <div className="bg-gray-200">
-=======
-    <div className="bg-white">
->>>>>>> origin
 
       <Navbar />
      
 
-<<<<<<< HEAD
       <div className="grid sm:grid-cols-2 max-w-7xl mx-auto h-auto rounded items-center justify-center  relative gap-5 " id="expertise">
      
         <div className="me-auto p-5 colspan-1 text-start mt-8 relative mr-0">
-=======
-      <div className="grid md:grid-cols-2 max-w-[80%] mx-auto rounded items-center justify-center top-[120px] relative gap-10 backdrop-blur-sm" id="expertise">
-     
-        <div className="col-span-1 me-auto p-5 text-start mt-8 relative mr-0">
->>>>>>> origin
           <p className="text-[15px] text-[#161616] font-bold">HELLO EVERYBODY, I'M</p>
           <h1 className="text-[#161616] text-[#161616] font-extrabold text-[32px]">MD. SAKIB KAMAL</h1>
           <p className="text-[15px] text-[#161616] font-bold">WEB DEVELOPER</p>
@@ -38,37 +28,12 @@ const Home = () => {
           <div className="pt-5   me-auto  relative">
 
 
-<<<<<<< HEAD
             <div className="flex flex-col ">
               <div class="sm:w-[400px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
-=======
-            <div className="flex flex-col  gap-2">
-              <p className="text-start text-[14px] text-[#161616] font-extrabold">react.js 70%</p>
-              <div class="w-[450px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
-                <div class="bg-[#161616]  text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded" style={{ width: '70%' }}> 70%</div>
-              </div>
-            </div>
-            <div className="flex flex-col  gap-2">
-              <p className="text-start text-[14px] text-[#161616] font-extrabold">tailwindcss 90%</p>
-              <div class="w-[450px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
-                <div class="bg-[#161616]  text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded" style={{ width: '90%' }}> 90%</div>
-              </div>
-            </div>
-            <div className="flex flex-col  gap-2">
-              <p className="text-start text-[14px] text-[#161616] font-extrabold">node.js 70%</p>
-              <div class="w-[450px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
-                <div class="bg-[#161616]  text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded" style={{ width: '70%' }}> 70%</div>
-              </div>
-            </div>
-            <div className="flex flex-col  gap-2">
-              <p className="text-start text-[14px] text-[#161616] font-extrabold">express.js 50%</p>
-              <div class="w-[450px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
->>>>>>> origin
                 <div class="bg-[#161616]  text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded" style={{ width: '50%' }}> 50%</div>
               </div>
               <p className="text-start text-[14px] text-[#161616] font-extrabold">react.js 50%</p>
             </div>
-<<<<<<< HEAD
             <div className="flex flex-col  ">
               <div class="sm:w-[400px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
                 <div class="bg-[#161616]  text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded" style={{ width: '90%' }}> 90%</div>
@@ -92,11 +57,6 @@ const Home = () => {
             <div className="flex flex-col  ">
              
               <div class="sm:w-[400px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
-=======
-            <div className="flex flex-col  gap-2">
-              <p className="text-start text-[14px] text-[#161616] font-extrabold">Mongodb 70%</p>
-              <div class="w-[450px] h-[17px] bg-gray-600 rounded dark:bg-gray-600">
->>>>>>> origin
                 <div class="bg-[#161616]  text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded" style={{ width: '70%' }}> 70%</div>
                 <p className="text-start text-[14px] text-[#161616] font-extrabold">Mongodb 70%</p>
               </div>
@@ -123,22 +83,13 @@ const Home = () => {
           </div>
           
         </div>
-<<<<<<< HEAD
         <div className="ms-auto colspan-1 text-start mt-8 relative mr-0">
           <img src={Sakib} alt="Sakib" className="h-[500px]  w-full rounded-2xl object-cover p-20" />
-=======
-        <div className="col-span-1 ms-auto text-start mt-5 relative mr-0">
-          <img src={Sakib} alt="Sakib" className="h-[400px]  w-auto rounded-2xl object-cover " />
->>>>>>> origin
           </div>
           
       </div>
       
-<<<<<<< HEAD
       <div className=" max-w-7xl mx-auto items-center relative justify-center">
-=======
-      <div className="mt-40 max-w-7xl mx-auto items-center relative justify-center">
->>>>>>> origin
       
         <h1 className="text-center text-[40px]  font-bold mb-20 z-20 text-[#161616] ">Educational Qualification</h1>
         <VerticalTimeline>
