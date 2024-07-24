@@ -19,14 +19,12 @@ const Navbar = () => {
 
   return (
 
-    <div>
-      <div className="relative ">
         
 
-        <header className=" bg-[#161616]  shadow  z-20 fixed top-0 w-full">
+        <div className=" bg-[#161616]  sticky top-0 z-30 shadow-2xl ">
           <nav className="mx-auto flex max-w-7xl h-[75px] items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
-              <Link to='/'><p className="text-[#161616]/90 w-[50px] rounded flex items-center justify-center p-1 h-[50px] bg-white font-medium text-[20px] font-ubuntu">SK</p></Link>
+              <Link to='/'><p className="text-[#161616]/90 w-[50px] rounded flex items-center justify-center p-1 h-[50px] bg-white font-extrabold text-[20px] font-ubuntu">SK</p></Link>
               <p  className="flex pl-5 items-center font-extrabold text-white justify-center ">SAKIB | KAMAL</p>
             </div>
             <div className="flex lg:hidden">
@@ -36,7 +34,7 @@ const Navbar = () => {
                 onClick={() => setMobileMenuOpen(true)}
               >
                 <span className="sr-only">Open main menu</span>
-                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                <Bars3Icon className="h-6 text-white w-6" aria-hidden="true" />
               </button>
             </div>
             <PopoverGroup className="hidden lg:flex lg:gap-x-12">
@@ -65,16 +63,11 @@ const Navbar = () => {
             </div>
           </nav>
           <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-            <div className="fixed inset-0 z-10" />
+            <div className="fixed  inset-0 z-40" />
             <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-gradient-to-r from-white/80 via-white/80 to-white/80 px-6 py-6 sm:max-w-sm sm:ring-1 ">
               <div className="flex items-center justify-between">
                 
-                  
-                  <img
-                    className="h-8 w-auto "
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt=""
-                  />
+                
                
                 <button
                   type="button"
@@ -90,17 +83,17 @@ const Navbar = () => {
                   <div className="space-y-2 py-6">
 
                     
-                  <Link to="/education"><p className="font-bold text-white">Education & Training</p>
+                  <Link to="/education"><p className="font-bold text-[#161616]">Education & Training</p>
                 
                 </Link>
                  
-                <p className="font-bold text-white"> Work Experiance</p>
+                <p className="font-bold text-[#161616]"> Work Experiance</p>
                   
-                   <p className="font-bold text-white">Projects</p>
-                   <p className="font-bold text-white">Contact</p>
+                   <p className="font-bold text-[#161616]">Projects</p>
+                   <p className="font-bold text-[#161616]">Contact</p>
                    
                   </div>
-                  <div className="py-6 font-bold text-white">
+                  <div className="py-6 font-bold text-[#161616]">
                    
                       Resume
                    
@@ -109,13 +102,8 @@ const Navbar = () => {
               </div>
             </DialogPanel>
           </Dialog>
-        </header>
-      </div>
-
-
-      
+        </div>
      
-    </div>
   );
 }
 
