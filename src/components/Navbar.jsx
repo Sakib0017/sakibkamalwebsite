@@ -18,14 +18,18 @@ const Navbar = () => {
 
 
   return (
-
+    <>
+    <div className=" bg-gray-900   shadow-2xl ">
+    
+    
+  </div>
         
 
-        <div className=" bg-[#161616]  sticky top-0 z-30 shadow-2xl ">
-          <nav className="mx-auto flex max-w-7xl h-[75px] items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div className=" bg-gray-900  ">
+          <nav className="mx-auto flex max-w-7xl h-[90px] items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
               <Link to='/'><p className="text-[#161616]/90 w-[50px] rounded flex items-center justify-center p-1 h-[50px] bg-white font-extrabold text-[20px] font-ubuntu">SK</p></Link>
-              <p  className="flex pl-5 items-center font-extrabold text-white justify-center ">SAKIB | KAMAL</p>
+              <p  className="flex pl-5 items-center font-extrabold text-white justify-center">SAKIB KAMAL<span className="pl-1 text-[24px] font-extrabold text-purple-300">.</span></p>
             </div>
             <div className="flex lg:hidden">
               <button
@@ -40,27 +44,29 @@ const Navbar = () => {
             <PopoverGroup className="hidden lg:flex lg:gap-x-12">
 
 
+            <Link to="/"><p className="font-bold text-white">Home</p>
+                
+                </Link>
              
-             
-              <Link to="/education"><p className="font-bold text-white">Education & Training</p>
+              <Link to="/education"><p className="font-bold text-white">Services</p>
                 
              </Link>
               
-             <p className="font-bold text-white"> Work Experiance</p>
+             
                
-                <p className="font-bold text-white">Projects</p>
+                <p className="font-bold text-white">Work</p>
                 <p className="font-bold text-white">Contact</p>
                 
+                <div className="hidden lg:flex lg:flex-1 lg:justify-end font-bold text-white">
               
+              Resume <span aria-hidden="true">&rarr;</span>
+            
+          </div>
               
                 
               
             </PopoverGroup>
-            <div className="hidden lg:flex lg:flex-1 lg:justify-end font-bold text-white">
-              
-                Resume <span aria-hidden="true">&rarr;</span>
-              
-            </div>
+            
           </nav>
           <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
             <div className="fixed  inset-0 z-40" />
@@ -82,27 +88,37 @@ const Navbar = () => {
                 <div className="-my-6 divide-y divide-gray-500/10">
                   <div className="space-y-2 py-6">
 
-                    
-                  <Link to="/education"><p className="font-bold text-[#161616]">Education & Training</p>
+                  <Link to="/education"><p className="font-bold text-white">Home</p>
+                
+                </Link>
+                  
+              <Link to="/education"><p className="font-bold text-white">Services</p>
                 
                 </Link>
                  
-                <p className="font-bold text-[#161616]"> Work Experiance</p>
+                
                   
-                   <p className="font-bold text-[#161616]">Projects</p>
-                   <p className="font-bold text-[#161616]">Contact</p>
+                   <p className="font-bold text-white">Work</p>
+                   <p className="font-bold text-white">Contact</p>
                    
-                  </div>
-                  <div className="py-6 font-bold text-[#161616]">
-                   
-                      Resume
-                   
-                  </div>
+                   <div className="hidden lg:flex lg:flex-1 lg:justify-end font-bold text-white">
+                 
+                 Resume <span aria-hidden="true">&rarr;</span>
+               
+             </div>
+            
+          </div>
                 </div>
               </div>
             </DialogPanel>
           </Dialog>
+          
         </div>
+
+
+
+        
+        </>
      
   );
 }
