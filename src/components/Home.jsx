@@ -59,7 +59,7 @@ const Home = () => {
           
         </div>
         <div className="ms-auto colspan-1 text-start mt-8 relative mr-0">
-          <img src={Sakib} alt="Sakib" className="h-[400px]  w-full border-[3px] border-purple-300 border-dashed rounded-full object-cover " />
+          <img src={Sakib} alt="Sakib" className="h-[400px]  w-full border-[3px] border-purple-300 border-dashed" />
           </div>
           
       </div>
