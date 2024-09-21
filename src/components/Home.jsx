@@ -16,7 +16,7 @@ const Home = () => {
       <Navbar />
      
 
-      <div className="grid sm:grid-cols-2 max-w-7xl mx-auto  rounded flex items-center justify-center mt-20 relative gap-5 " id="expertise">
+      <div className="grid sm:grid-cols-2 max-w-6xl mx-auto  rounded flex items-center justify-center mt-20 relative gap-5 " id="expertise">
      
         <div className="me-auto p-5 colspan-1 text-start mt-8 relative mr-0">
         <p className="text-[15px] text-[#ffffff] font-bold">Software Developer(Frontend)</p>
@@ -67,7 +67,7 @@ const Home = () => {
 
 
 
-      <div className="grid sm:grid-cols-4 max-w-7xl mx-auto flex items-center justify-center mt-20  gap-5 ">
+      <div className="grid sm:grid-cols-4 max-w-6xl mx-auto flex items-center justify-center mt-20  gap-5 ">
         <div className=" p-5 colspan-1 text-start  mt-8  mr-0">
          <div className="flex flex-row  items-center">
             <p className="pr-2 text-[48px] font-extrabold text-white">04</p>
