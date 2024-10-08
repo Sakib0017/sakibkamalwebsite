@@ -23,7 +23,7 @@ const Navbar = () => {
         
 
         <div className=" bg-[#004B87] sticky top-0   z-10">
-          <nav className="mx-auto flex max-w-7xl border-b h-[90px]   items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <nav className="mx-auto flex max-w-7xl  h-[90px]   items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div className="flex lg:flex-1">
               <Link to='/'><p className="text-[#161616]/90 w-[50px] rounded flex items-center justify-center p-1 h-[50px] bg-white font-extrabold text-[20px] font-ubuntu">SK.</p></Link>
               </div>
